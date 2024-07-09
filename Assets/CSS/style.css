@@ -1,0 +1,20 @@
+.root {
+    --aqua: rgb(130, 225, 225);
+    --grey: rgb(68, 68, 68);
+    --navy: rgb(44, 44, 67);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1, .two {
+    color: var(--grey);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
