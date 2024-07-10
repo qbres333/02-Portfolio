@@ -53,7 +53,7 @@ h1 {
 .grid-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 3px 3fr;
+    grid-template-columns: 1fr 3px 5fr;
     gap: 25px 10px;
     /* row-gap: 25px; */
     text-align: top;
