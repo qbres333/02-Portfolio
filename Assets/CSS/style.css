@@ -7,6 +7,8 @@
 .header {
     display: flex;
     justify-content: space-between;
+    line-height: 50px;
+    background-color: var(--grey);
 }
 
 .header h1, .two {
@@ -15,6 +17,22 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    text-align: top;
+   
+}
+
+.grid-container section {
+    vertical-align: text-top;
+}
+.one, .three, .five, .seven {
+    background-color: aqua;
+    text-align: right;
+}
+
+.two, .four, .six, .eight {
+    background-color: lightseagreen;
+    /* vertical-align: text-top; */
 }
