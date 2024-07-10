@@ -45,7 +45,7 @@ h1 {
 
 .header-img img {
     /* position:relative; */
-    height: 120px;
+    height: min-content;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -81,7 +81,7 @@ h1 {
 .about-title, .work-title, 
 .contact-title, .resume-title {
     color: var(--navy);
-    font-size: 12px;
+    font-size: 16px;
     /* background-color: lightseagreen; */
     padding: 5px;
 }
