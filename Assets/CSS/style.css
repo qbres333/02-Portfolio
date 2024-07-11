@@ -85,16 +85,20 @@ h1 {
 .bio, .work, .contact, .resume {
     display: flex;
     margin-left: 20px;
+    margin-bottom: 30px;
 }
 
 section > div {
     width: 80%;
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
 }
 
-.port-header, div {
-    margin-bottom: 30px;
+.bio-text, .code-links, 
+.contact-info, .resume-doc {
+    display: flex;
+    flex-wrap: wrap;
+    /* font-weight: bold; */
 }
 
 .big-tile {
@@ -115,7 +119,7 @@ section > div {
     border-color: var(--aqua);
 }
 
-.contact-info > a, .resume-doc {
+.contact-info > a, .resume-doc > a {
     color: var(--navy);
     margin-left: 10px;
     margin-right: 10px;
