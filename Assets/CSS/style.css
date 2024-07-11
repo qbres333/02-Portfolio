@@ -58,20 +58,6 @@ h1 {
 }
 
 .portfolio {
-    display: flex;
-    flex-direction: row;
- 
-    
-    color: var(--navy);
-    
-}
-
-.column-split {
-    background-color: var(--navy);
-    
-}
-
-.portfolio {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -86,16 +72,30 @@ h1 {
 }
 
 .port-header {
-    color: var(--navy);
-    font-size: 16px;
-    /* background-color: lightseagreen; */
-    padding: 5px;
     width: 20%;
+    color: var(--navy);
+    font-size: 40px;
+    /* margin-top: 20px; */
+    margin-right: 20px;
+    border-right-width: 3px ;
+    border-right-color: var(--navy);
+    
 }
 
 .bio, .work, .contact, .resume {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
+}
+
+div {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.port-header, div {
+    margin-bottom: 30px;
 }
 
 .big-tile {
@@ -107,11 +107,10 @@ h1 {
 .small-tile {
     
     width: 50%;
-  
+    margin-bottom: 10px;
+    /* margin-left: 10px; */
     
-    /* align-items: flex-start; */
-    /* flex-direction: row; */
-    /* margin-left: 5px; */
+   
 }
 
 .big-tile, .small-tile {
