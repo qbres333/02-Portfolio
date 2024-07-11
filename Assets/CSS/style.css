@@ -4,16 +4,23 @@
     --navy: rgb(32, 63, 90);
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    margin: 0px 70px;
+    display: flex;
+    flex-direction: column; /* stacks elements initially */
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* aligns nav links vertically */
+
     background-color: var(--grey);
     padding: 10px 40px 10px 0px;
 }
@@ -50,13 +57,11 @@ h1 {
     margin-bottom: 20px;
 }
 
-.grid-container {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 3px 5fr;
-    gap: 25px 10px;
-    /* row-gap: 25px; */
-    text-align: top;
+.portfolio {
+    display: flex;
+    flex-direction: row;
+ 
+    
     color: var(--navy);
     
 }
@@ -66,22 +71,51 @@ h1 {
     
 }
 
-.section-name {
+.portfolio {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
     color: var(--navy);
     font-size: 30px;
     font-weight: bold;
-    border: 2px;
-    background-color: lightgreen;
-    /* border-right-color: red;
-    border-right-width: 2px; */
     text-align: right;
     padding-right: 5px;
+    /* width: 20% */
 }
 
-.about-title, .work-title, 
-.contact-title, .resume-title {
+.port-header {
     color: var(--navy);
     font-size: 16px;
     /* background-color: lightseagreen; */
     padding: 5px;
+    width: 20%;
+}
+
+.bio, .work, .contact, .resume {
+    display: flex;
+    flex-direction: row;
+}
+
+.big-tile {
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.small-tile {
+    
+    width: 50%;
+  
+    
+    /* align-items: flex-start; */
+    /* flex-direction: row; */
+    /* margin-left: 5px; */
+}
+
+.big-tile, .small-tile {
+    border: 4px;
+    border-style: solid;
+    border-color: var(--aqua);
 }
