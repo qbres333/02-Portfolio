@@ -10,13 +10,14 @@ html {
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0px 70px;
+    
     display: flex;
     flex-direction: column; /* stacks elements initially */
 }
 
-.header {
+.main-header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; /* aligns nav links vertically */
@@ -52,13 +53,12 @@ h1 {
 
 .header-img img {
     /* position:relative; */
-    height: min-content;
     width: 100%;
     margin-bottom: 20px;
 }
 
 .portfolio {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -66,7 +66,7 @@ h1 {
     color: var(--navy);
     font-size: 30px;
     font-weight: bold;
-    text-align: right;
+    margin: 0px 70px;
     padding-right: 5px;
     /* width: 20% */
 }
@@ -75,7 +75,7 @@ h1 {
     width: 20%;
     color: var(--navy);
     font-size: 40px;
-    /* margin-top: 20px; */
+    text-align: right;
     margin-right: 20px;
     border-right-width: 3px ;
     border-right-color: var(--navy);
@@ -84,13 +84,12 @@ h1 {
 
 .bio, .work, .contact, .resume {
     display: flex;
-    flex-direction: row;
     margin-left: 20px;
 }
 
-div {
+section > div {
     width: 80%;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
 }
 
@@ -105,11 +104,8 @@ div {
 }
 
 .small-tile {
-    
     width: 50%;
     margin-bottom: 10px;
-    /* margin-left: 10px; */
-    
    
 }
 
@@ -118,3 +114,18 @@ div {
     border-style: solid;
     border-color: var(--aqua);
 }
+
+.contact-info > a, .resume-doc {
+    color: var(--navy);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-header,
+    .portfolio {
+      flex-direction: column;
+    }
+  }
