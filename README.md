@@ -22,3 +22,10 @@ The website has accessibility features (alt text), my work history, and contant 
 
 ## Credits
 
+Instructions provided by UC Berkeley, and can be found here:
+https://git.bootcampcontent.com/University-of-California---Berkeley/UCB-VIRT-FSF-PT-06-2024-U-LOLC/-/tree/main/02-Advanced-CSS/02-Challenge?ref_type=heads
+
+## License
+
+MIT License (located in root directory):
+https://github.com/qbres333/02-Portfolio.git
