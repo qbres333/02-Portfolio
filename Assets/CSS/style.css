@@ -57,7 +57,7 @@ body {
 
 /* align text to the bottom right of the img */
 .img-text {
-
+    display: flex;  /*can't tell if this is working */
     position: absolute;
     bottom: 25px;
     right: 25px;
@@ -89,12 +89,15 @@ body {
 }
 
 .port-header {
+    /* display:flex; */
+    /* flex-wrap: wrap; */
     width: 30%;
     background-color: var(--aqua);
     color: var(--navy);
     font-size: 40px;
     font-weight: bold;
     text-align: right;
+    /* text-wrap: wrap; */
     margin-right: 10px;
     padding: 5px 20px 5px 5px;
     border-right: 5px solid var(--grey);
@@ -109,6 +112,7 @@ body {
     width: 70%;
     font-size: 20px;
     font-weight: bold;
+
     /* background-color: rgb(195, 233, 233); */
     /* border-color: black; */
     border-right: 5px solid var(--grey);
@@ -119,6 +123,7 @@ body {
 
 .bio-text, .contact-info, .res-doc {
     padding: 5px;
+    
 }
 
 .tile-1, .tile-2 {
@@ -140,6 +145,8 @@ the only value that allowed 2 images to be on the same line*/
 /* align text to the bottom right of the big tile */
 .tile-text {
     /* display: flex; */
+    flex-wrap: wrap;
+
     position: absolute;
     bottom: 25px;
     left: 0px;
@@ -163,8 +170,10 @@ the only value that allowed 2 images to be on the same line*/
     
 }
 
+/* -----------------------ADJUST WIDTH------------------ */
 .tile-2 img {
     width: 100%;
+    flex: auto;
 }
 
 /* -sets grayscale on images until they are hovered on
@@ -180,11 +189,13 @@ the only value that allowed 2 images to be on the same line*/
     filter: grayscale(0);
 }
 
+/* align flex items vertically */
 .contact-info, .res-doc {
     align-items: center;
     
 }
 
+/* style non-nav links */
 .contact-info a, .res-doc a {
     margin-right: 30px;
     color: var(--navy);
@@ -197,31 +208,63 @@ the only value that allowed 2 images to be on the same line*/
     
 }
 
+/* center img tiles */
+/* @media screen and (max-width: 1295px) {
+        .tile-2, .tile-text {
+        justify-content: center;
+    }
 
-@media screen and (max-width: 1294px) {
+
+  } */
+
+/* stacks elements based on viewport size */
+@media screen and (max-width: 960px) {
     .main-header,
     .portfolio {
       flex-direction: column;
+      
+    }
+
+    .tile-2 {
+        justify-content: center;
+    }
+
+    .tile-1 .tile-text {
+        bottom: 5%;
+        left: 0.5%;
+    }
+    .tile-text {
+        /* position: absolute; */
+        bottom: 5%;
+        left: 15%;
     }
 
   }
 
   
-/* 
-@media screen and (min-width: 769px) {
+/* wraps letters when the viewing window is very small */
+@media screen and (max-width: 652px) {
    
-    .port-header {
-        width: 20%;
+    .name, .port-header,
+    .img-text, .tile-text {
+       word-wrap: break-word;
         
     }
-
-    .bio-text, .code-links, 
-    .contact-info, .resume-doc {
-        width: 80%;
-       
+/* reducing font size for smaller screens */
+    .port-header {
+        font-size: 27px;
     }
 
+    .bio-text, .projects, .contact-info, .res-doc {
+        font-size: 14px;
+    }
 
+    .name, .img-text, .tile-text {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 8px;
+    }
   } 
 
-  */
+ /* .img-text, .tile-text */
