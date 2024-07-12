@@ -10,7 +10,6 @@ html {
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
     display: flex;
     flex-direction: column; /* stacks elements initially */
 }
@@ -36,9 +35,6 @@ body {
     padding-right: 5px;
 }
 
-h1 {
-    color: var(--aqua);
-}
 
 .nav {
     vertical-align: middle;
@@ -57,22 +53,38 @@ h1 {
     margin-bottom: 20px;
 }
 
+.header-img.img-text {
+    position: relative;
+    background-color: var(--aqua);
+    bottom: 8px;
+    right: 16px;
+  }
+
 .portfolio {
     /* flex: 1; */
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-direction: row; */
+    /* width: 100%; */
 
     color: var(--navy);
     font-size: 30px;
     font-weight: bold;
     margin: 0px 70px;
     padding-right: 5px;
-    /* width: 20% */
+   
+}
+
+
+.bio, .work, .contact, .resume {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 30px;
 }
 
 .port-header {
     width: 20%;
+    /* height: max-content; */
     color: var(--navy);
     font-size: 40px;
     text-align: right;
@@ -82,54 +94,88 @@ h1 {
     
 }
 
-.bio, .work, .contact, .resume {
-    display: flex;
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-
-section > div {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .bio-text, .code-links, 
 .contact-info, .resume-doc {
     display: flex;
     flex-wrap: wrap;
-    /* font-weight: bold; */
+    width: 80%;
+    margin-left: 20px;
+  
 }
+/* 
+.contact-info, .resume-doc {
+    flex-basis: 1;
+} */
 
 .big-tile {
+  
     width: 100%;
     margin-bottom: 10px;
     
 }
 
 .small-tile {
-    width: 50%;
+    max-width: fit-content;
     margin-bottom: 10px;
    
 }
 
 .big-tile, .small-tile {
-    border: 4px;
-    border-style: solid;
-    border-color: var(--aqua);
+    border: 4px solid var(--aqua);
+  
+}
+/* 
+.contact-info, .resume-doc {
+    display: flex;
+    width: 20%;
 }
 
 .contact-info > a, .resume-doc > a {
+    width: 80%;
+    display: inline-block;
     color: var(--navy);
     margin-left: 10px;
     margin-right: 10px;
     font-size: 20px;
+
 }
+ */
 
 
+/* 
 @media screen and (max-width: 768px) {
     .main-header,
     .portfolio {
       flex-direction: column;
     }
+
+    .bio-text, .code-links, 
+    .contact-info, .resume-doc {
+        width: 80%;
+    }
+
+    .port-header {
+        width: 20%;
+    }
+
   }
+
+  
+@media screen and (min-width: 769px) {
+   
+    .port-header {
+        width: 20%;
+        
+    }
+
+    .bio-text, .code-links, 
+    .contact-info, .resume-doc {
+        width: 80%;
+       
+    }
+
+
+  } 
+
+  */
