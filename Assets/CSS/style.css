@@ -126,6 +126,9 @@ body {
     
 }
 
+/* .tile-2 {
+    margin: 5px;
+} */
 
 /* DO NOT CHANGE FLEX: AUTO HERE */
 .tile-1, .tile-2 {
@@ -133,14 +136,13 @@ body {
     flex: auto;
     border: 5px solid var(--aqua);
     position: relative;
+    margin: 5px;
 }
 
 
 /* align text to the bottom right of the big tile */
-.tile-text {
-   
+.tile-text {   
     flex-wrap: wrap;
-
     position: absolute;
     bottom: 25px;
     left: 0px;
@@ -159,9 +161,10 @@ body {
 
 /* img doesn't fill the whole line */
 .tile-1 img { 
-    width: 100%;
+    /* width: auto; */
+    align-items: stretch;
     /* height: auto; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     
 }
 
@@ -204,11 +207,16 @@ body {
 }
 
 /* stretch project tiles */
-/* @media screen and (max-width: 1294px) {
-    .tile-2 {
-        flex: 4;
+@media screen and (max-width: 1295px) {
+   .tile-2 {
+        justify-content: center;
     }
-  } */
+
+    .tile-2 .tile-text {
+        bottom: 5%;
+        left: 25.4%;
+    }
+  }
 
 
 
@@ -224,13 +232,11 @@ body {
         text-align: center;
     }
 
-    .tile-2 {
-        justify-content: center;
-    }
+    
 
     .tile-1 .tile-text {
         bottom: 5%;
-        left: 0.5%;
+        left: 0.2%;
     }
     .tile-text {
         /* position: absolute; */
