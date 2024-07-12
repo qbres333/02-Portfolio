@@ -26,13 +26,13 @@ body {
 }
 
 
-/* name isn't wrapping when window is very small */
+/* --------------name wraps when window is large */
 .name {
     color: var(--grey);
     background-color: var(--aqua);
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    width: 25%;
+    width: 35%;
     text-align: right;
     padding-right: 5px;
 }
@@ -126,25 +126,19 @@ body {
     
 }
 
+
+/* DO NOT CHANGE FLEX: AUTO HERE */
 .tile-1, .tile-2 {
     display: flex;
-    /* justify-content: space-evenly; */
+    flex: auto;
     border: 5px solid var(--aqua);
     position: relative;
 }
 
-/* I tried different values/properties for flex, and this was 
-the only value that allowed 2 images to be on the same line*/
-.tile-2 {
-    flex: 1;    
-    flex-basis: auto;
-    /* justify-content: space-between; */
-    
-}
 
 /* align text to the bottom right of the big tile */
 .tile-text {
-    /* display: flex; */
+   
     flex-wrap: wrap;
 
     position: absolute;
@@ -163,9 +157,10 @@ the only value that allowed 2 images to be on the same line*/
     padding-top: 5px;
   }
 
-/* img takes all space on the line */
+/* img doesn't fill the whole line */
 .tile-1 img { 
     width: 100%;
+    /* height: auto; */
     margin-bottom: 5px;
     
 }
@@ -173,7 +168,7 @@ the only value that allowed 2 images to be on the same line*/
 /* -----------------------ADJUST WIDTH------------------ */
 .tile-2 img {
     width: 100%;
-    flex: auto;
+   
 }
 
 /* -sets grayscale on images until they are hovered on
@@ -192,7 +187,7 @@ the only value that allowed 2 images to be on the same line*/
 /* align flex items vertically */
 .contact-info, .res-doc {
     align-items: center;
-    
+        
 }
 
 /* style non-nav links */
@@ -208,14 +203,14 @@ the only value that allowed 2 images to be on the same line*/
     
 }
 
-/* center img tiles */
-/* @media screen and (max-width: 1295px) {
-        .tile-2, .tile-text {
-        justify-content: center;
+/* stretch project tiles */
+/* @media screen and (max-width: 1294px) {
+    .tile-2 {
+        flex: 4;
     }
-
-
   } */
+
+
 
 /* stacks elements based on viewport size */
 @media screen and (max-width: 960px) {
@@ -223,6 +218,10 @@ the only value that allowed 2 images to be on the same line*/
     .portfolio {
       flex-direction: column;
       
+    }
+
+    .name {
+        text-align: center;
     }
 
     .tile-2 {
@@ -245,13 +244,18 @@ the only value that allowed 2 images to be on the same line*/
 /* wraps letters when the viewing window is very small */
 @media screen and (max-width: 652px) {
    
+    .name {
+        text-align: center;
+    }
+
+
     .name, .port-header,
     .img-text, .tile-text {
        word-wrap: break-word;
         
     }
 /* reducing font size for smaller screens */
-    .port-header {
+    .name, .port-header {
         font-size: 27px;
     }
 
@@ -259,7 +263,7 @@ the only value that allowed 2 images to be on the same line*/
         font-size: 14px;
     }
 
-    .name, .img-text, .tile-text {
+    .img-text, .tile-text {
         font-size: 20px;
     }
     h5 {
@@ -267,4 +271,3 @@ the only value that allowed 2 images to be on the same line*/
     }
   } 
 
- /* .img-text, .tile-text */
