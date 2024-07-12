@@ -25,6 +25,8 @@ body {
     padding: 10px 30px 10px 0px;
 }
 
+
+/* name isn't wrapping when window is very small */
 .name {
     color: var(--grey);
     background-color: var(--aqua);
@@ -34,7 +36,6 @@ body {
     text-align: right;
     padding-right: 5px;
 }
-
 
 .nav a {
     color: var(--aqua);
@@ -62,6 +63,7 @@ body {
     right: 25px;
 
     font-size: 30px;
+    font-weight: bold;
     color: var(--grey);
     background-color: var(--aqua);
     padding: 10px;
@@ -107,9 +109,11 @@ body {
     width: 70%;
     font-size: 20px;
     font-weight: bold;
-    background-color: rgb(195, 233, 233);
+    /* background-color: rgb(195, 233, 233); */
+    /* border-color: black; */
+    border-right: 5px solid var(--grey);
     margin-left: 10px;
-    /* padding: 5px; */
+   
   
 }
 
@@ -118,20 +122,24 @@ body {
 }
 
 .tile-1, .tile-2 {
-    justify-content: space-evenly;
+    display: flex;
+    /* justify-content: space-evenly; */
     border: 5px solid var(--aqua);
     position: relative;
 }
 
-.tile-1 {
-    /* flex: 1; */
-    display: flex;
-    /* position: relative; */
+/* I tried different values/properties for flex, and this was 
+the only value that allowed 2 images to be on the same line*/
+.tile-2 {
+    flex: 1;    
+    flex-basis: auto;
+    /* justify-content: space-between; */
+    
 }
 
 /* align text to the bottom right of the big tile */
 .tile-text {
-
+    /* display: flex; */
     position: absolute;
     bottom: 25px;
     left: 0px;
@@ -143,27 +151,28 @@ body {
 
   }
 
+  h5 {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+
 /* img takes all space on the line */
 .tile-1 img { 
     width: 100%;
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
     
 }
 
-/* I tried different values/properties for flex, and this was 
-the only value that allowed 2 images to be on the same line*/
-.tile-2 {
-    flex: 1;
-    justify-content: space-evenly;
-    
+.tile-2 img {
+    width: 100%;
 }
 
 /* -sets grayscale on images until they are hovered on
 -transition to full cover upon hover takes 1 second */
 .tile-1 img, .tile-2 img {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     filter: grayscale(60%);
-    transition: 1s;
+    transition: 0.8s;
 }
 
 /* img becomes full color when you hover */
@@ -171,6 +180,16 @@ the only value that allowed 2 images to be on the same line*/
     filter: grayscale(0);
 }
 
+.contact-info, .res-doc {
+    align-items: center;
+    
+}
+
+.contact-info a, .res-doc a {
+    margin-right: 30px;
+    color: var(--navy);
+    font-weight: bold;
+}
 .footer {
     width: 100%;
     padding: 30px;
@@ -179,17 +198,16 @@ the only value that allowed 2 images to be on the same line*/
 }
 
 
-/* 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1294px) {
     .main-header,
     .portfolio {
       flex-direction: column;
     }
 
-
   }
 
   
+/* 
 @media screen and (min-width: 769px) {
    
     .port-header {
