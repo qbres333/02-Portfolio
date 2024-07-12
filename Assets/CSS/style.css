@@ -120,27 +120,56 @@ body {
 .tile-1, .tile-2 {
     justify-content: space-evenly;
     border: 5px solid var(--aqua);
+    position: relative;
 }
 
-.tile-1 {    
+.tile-1 {
     /* flex: 1; */
-    width: 100%;
-    margin-bottom: 10px;
+    display: flex;
+    /* position: relative; */
 }
 
+/* align text to the bottom right of the big tile */
+.tile-text {
 
+    position: absolute;
+    bottom: 25px;
+    left: 0px;
+
+    font-size: 30px;
+    color: var(--grey);
+    background-color: var(--aqua);
+    padding: 10px;
+
+  }
+
+/* img takes all space on the line */
+.tile-1 img { 
+    width: 100%;
+    /* margin-bottom: 5px; */
+    
+}
+
+/* I tried different values/properties for flex, and this was 
+the only value that allowed 2 images to be on the same line*/
 .tile-2 {
     flex: 1;
+    justify-content: space-evenly;
+    
 }
 
+/* -sets grayscale on images until they are hovered on
+-transition to full cover upon hover takes 1 second */
+.tile-1 img, .tile-2 img {
+    margin-bottom: 5px;
+    filter: grayscale(60%);
+    transition: 1s;
+}
 
-
-/* 
-.contact-info a {
-    display: flex;
-    justify-content: space-evenly;
-
-} */
+/* img becomes full color when you hover */
+.tile-1 img:hover, .tile-2 img:hover {
+    filter: grayscale(0);
+}
 
 .footer {
     width: 100%;
