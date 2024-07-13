@@ -26,13 +26,13 @@ body {
 }
 
 
-/* --------------name wraps when window is large */
+/* --------------name wraps when window is large------------ */
 .name {
     color: var(--grey);
     background-color: var(--aqua);
     font-size: 40px;
     font-weight: bold;
-    width: 35%;
+    width: 32%;
     text-align: right;
     padding-right: 5px;
 }
@@ -70,6 +70,7 @@ body {
 
   }
 
+/* make the portfolio a flex container */
 .portfolio {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +81,7 @@ body {
    
 }
 
-
+/* make the portfolio sections a flex container */
 .bio, .work, .contact, .resume {
     display: flex;
     width: 100%;
@@ -88,37 +89,29 @@ body {
     
 }
 
-.port-header {
-    /* display:flex; */
-    /* flex-wrap: wrap; */
-    width: 30%;
-    background-color: var(--aqua);
+/* style left panel */
+.port-header {   
+    width: 30%; 
     color: var(--navy);
     font-size: 40px;
     font-weight: bold;
     text-align: right;
-    /* text-wrap: wrap; */
     margin-right: 10px;
     padding: 5px 20px 5px 5px;
     border-right: 5px solid var(--grey);
- 
-    
+     
 }
 
-
+/* make section details flex containers */
 .bio-text, .projects, .contact-info, .res-doc {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     font-size: 20px;
     font-weight: bold;
-
-    /* background-color: rgb(195, 233, 233); */
-    /* border-color: black; */
     border-right: 5px solid var(--grey);
     margin-left: 10px;
-   
-  
+     
 }
 
 .bio-text, .contact-info, .res-doc {
@@ -126,11 +119,8 @@ body {
     
 }
 
-/* .tile-2 {
-    margin: 5px;
-} */
 
-/* DO NOT CHANGE FLEX: AUTO HERE */
+/* make the project tiles flex containers */
 .tile-1, .tile-2 {
     display: flex;
     flex: auto;
@@ -161,14 +151,11 @@ body {
 
 /* img doesn't fill the whole line */
 .tile-1 img { 
-    /* width: auto; */
-    align-items: stretch;
-    /* height: auto; */
-    /* margin-bottom: 5px; */
-    
+    width: 100%;
+       
 }
 
-/* -----------------------ADJUST WIDTH------------------ */
+
 .tile-2 img {
     width: 100%;
    
@@ -176,8 +163,7 @@ body {
 
 /* -sets grayscale on images until they are hovered on
 -transition to full cover upon hover takes 1 second */
-.tile-1 img, .tile-2 img {
-    /* margin-bottom: 5px; */
+.tile-1 img, .tile-2 img {    
     filter: grayscale(60%);
     transition: 0.8s;
 }
@@ -238,8 +224,7 @@ body {
         bottom: 5%;
         left: 0.2%;
     }
-    .tile-text {
-        /* position: absolute; */
+    .tile-text {        
         bottom: 5%;
         left: 15%;
     }
