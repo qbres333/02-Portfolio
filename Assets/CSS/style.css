@@ -166,8 +166,7 @@ h5 {
 
 /* -sets grayscale on images until they are hovered on
 -transition to full cover upon hover takes 1 second */
-.tile-1 img,
-.tile-2 img {
+.tile-1 img, .tile-2 img {
     width: 100%;
     height: 100%;
     filter: grayscale(60%);
@@ -200,18 +199,6 @@ h5 {
     padding: 30px;
     text-align: center;
 
-}
-
-/* stretch big tile to fit container on big screens */
-
-@media screen and (min-width: 1453px) {
-    .tile-1 img {
-        /* width: 100%; */
-        /* height: 100%; */
-        /* justify-self: stretch; */
-        /* object-fit: cover; */
-
-    }
 }
 
 /*  shift small project tiles and tile text */
