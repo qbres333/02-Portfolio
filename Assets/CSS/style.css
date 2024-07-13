@@ -11,7 +11,8 @@ html {
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* stacks elements initially */
+    flex-direction: column;
+    /* stacks elements initially */
 }
 
 .main-header {
@@ -19,7 +20,8 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; /* aligns nav links vertically */
+    align-items: center;
+    /* aligns nav links vertically */
 
     background-color: var(--grey);
     padding: 10px 30px 10px 0px;
@@ -58,7 +60,8 @@ body {
 
 /* align text to the bottom right of the img */
 .img-text {
-    display: flex;  /*can't tell if this is working */
+    display: flex;
+    /*can't tell if this is working */
     position: absolute;
     bottom: 25px;
     right: 25px;
@@ -69,30 +72,33 @@ body {
     background-color: var(--aqua);
     padding: 6px;
 
-  }
+}
 
 /* make the portfolio a flex container */
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-   
+
     color: var(--navy);
     margin: 0px 70px;
     padding-right: 5px;
-   
+
 }
 
 /* make the portfolio sections a flex container */
-.bio, .work, .contact, .resume {
+.bio,
+.work,
+.contact,
+.resume {
     display: flex;
     width: 100%;
     margin-bottom: 30px;
-    
+
 }
 
 /* style left panel */
-.port-header {   
-    width: 30%; 
+.port-header {
+    width: 30%;
     color: var(--navy);
     font-size: 40px;
     font-weight: bold;
@@ -100,11 +106,14 @@ body {
     margin-right: 10px;
     padding: 5px 20px 5px 5px;
     border-right: 5px solid var(--grey);
-     
+
 }
 
 /* make section details flex containers */
-.bio-text, .projects, .contact-info, .res-doc {
+.bio-text,
+.projects,
+.contact-info,
+.res-doc {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
@@ -112,17 +121,20 @@ body {
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-     
+
 }
 
-.bio-text, .contact-info, .res-doc {
+.bio-text,
+.contact-info,
+.res-doc {
     padding: 5px;
-    
+
 }
 
 
 /* make the project tiles flex containers */
-.tile-1, .tile-2 {
+.tile-1,
+.tile-2 {
     display: flex;
     flex: auto;
     border: 5px solid var(--aqua);
@@ -132,7 +144,7 @@ body {
 
 
 /* align text to the bottom right of the big tile */
-.tile-text {   
+.tile-text {
     flex-wrap: wrap;
     position: absolute;
     bottom: 25px;
@@ -143,68 +155,66 @@ body {
     background-color: var(--aqua);
     padding: 10px;
 
-  }
+}
 
-  h5 {
+h5 {
     font-size: 12px;
     padding-top: 5px;
-  }
-
-/* img doesn't fill the whole line */
-.tile-1 img { 
-    width: 100%;
-    object-fit: fill;
-    /* justify-self: stretch; */
 }
 
-
-.tile-2 img {
-    width: 100%;
-   
-}
+/* tile images don't fill the whole container above 1453px viewport width*/
 
 /* -sets grayscale on images until they are hovered on
 -transition to full cover upon hover takes 1 second */
-.tile-1 img, .tile-2 img {    
+.tile-1 img,
+.tile-2 img {
+    width: 100%;
     filter: grayscale(60%);
     transition: 0.8s;
 }
 
 /* img becomes full color when you hover */
-.tile-1 img:hover, .tile-2 img:hover {
+.tile-1 img:hover,
+.tile-2 img:hover {
     filter: grayscale(0);
 }
 
 /* align flex items vertically */
-.contact-info, .res-doc {
+.contact-info,
+.res-doc {
     align-items: center;
-        
+
 }
 
 /* style non-nav links */
-.contact-info a, .res-doc a {
+.contact-info a,
+.res-doc a {
     margin-right: 30px;
     color: var(--navy);
     font-weight: bold;
 }
+
 .footer {
     width: 100%;
     padding: 30px;
     text-align: center;
-    
+
 }
 
 /* stretch big tile to fit container on big screens */
 @media screen and (min-width: 1453px) {
     .tile-1 img {
         /* width: 100%; */
+        /* height: 100%; */
         /* justify-self: stretch; */
+        /* object-fit: cover; */
+
     }
 }
 
 /*  shift small project tiles and tile text */
 @media screen and (max-width: 1295px) {
-   .tile-2 {
+    .tile-2 {
         justify-content: center;
     }
 
@@ -212,63 +222,73 @@ body {
         bottom: 5%;
         left: 25.4%;
     }
-  }
+}
 
 
 
 /* stacks elements based on viewport size */
 @media screen and (max-width: 960px) {
+
     .main-header,
     .portfolio {
-      flex-direction: column;
-      
+        flex-direction: column;
+
     }
 
     .name {
         text-align: center;
     }
 
-    
+
 
     .tile-1 .tile-text {
         bottom: 5%;
         left: 0.2%;
     }
-    .tile-text {        
+
+    .tile-text {
         bottom: 5%;
         left: 15%;
     }
 
-  }
+}
 
-  
+
 /* wraps letters when the viewing window is very small */
 @media screen and (max-width: 652px) {
-   
+
     .name {
         text-align: center;
     }
 
 
-    .name, .port-header,
-    .img-text, .tile-text {
-       word-wrap: break-word;
-        
+    .name,
+    .port-header,
+    .img-text,
+    .tile-text {
+        word-wrap: break-word;
+
     }
-/* reducing font size for smaller screens */
-    .name, .port-header {
+
+    /* reducing font size for smaller screens */
+    .name,
+    .port-header {
         font-size: 27px;
     }
 
-    .bio-text, .projects, .contact-info, .res-doc {
+    .bio-text,
+    .projects,
+    .contact-info,
+    .res-doc {
         font-size: 14px;
     }
 
-    .img-text, .tile-text {
+    .img-text,
+    .tile-text {
         font-size: 20px;
     }
+
     h5 {
         font-size: 8px;
     }
-  } 
-
+}
