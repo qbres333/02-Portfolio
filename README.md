@@ -14,7 +14,7 @@ https://github.com/qbres333/02-Portfolio.git
 
 ## Usage
 
-This website can be used to store all of my web development projects, and can be referenced by employers when evaluating me as a candidate.
+This website is used to store all of my web development projects, and can be referenced by employers when evaluating me as a candidate.
 
 ## Features
 

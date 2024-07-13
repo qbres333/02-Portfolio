@@ -34,14 +34,15 @@ body {
     font-weight: bold;
     width: 32%;
     text-align: right;
-    padding-right: 5px;
+    padding: 8px;
 }
 
 .nav a {
     color: var(--aqua);
+    font-size: 20px;
     font-weight: bold;
     margin-right: 10px;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 4px;
 }
 
 /* container holding the main image and img text */
@@ -66,7 +67,7 @@ body {
     font-weight: bold;
     color: var(--grey);
     background-color: var(--aqua);
-    padding: 10px;
+    padding: 6px;
 
   }
 
@@ -107,6 +108,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
+
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
@@ -151,7 +153,8 @@ body {
 /* img doesn't fill the whole line */
 .tile-1 img { 
     width: 100%;
-       
+    object-fit: fill;
+    /* justify-self: stretch; */
 }
 
 
@@ -191,7 +194,15 @@ body {
     
 }
 
-/* stretch project tiles */
+/* stretch big tile to fit container on big screens */
+@media screen and (min-width: 1453px) {
+    .tile-1 img {
+        /* width: 100%; */
+        /* justify-self: stretch; */
+    }
+}
+
+/*  shift small project tiles and tile text */
 @media screen and (max-width: 1295px) {
    .tile-2 {
         justify-content: center;
