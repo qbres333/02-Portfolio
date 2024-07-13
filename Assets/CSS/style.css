@@ -60,7 +60,6 @@ body {
 /* align text to the bottom right of the img */
 .img-text {
     display: flex;
-    /*can't tell if this is working */
     position: absolute;
     bottom: 25px;
     right: 25px;
@@ -203,7 +202,7 @@ viewport width */
 
 }
 
-/*  shift small project tiles and tile text */
+/*  shift small project tiles and tile text on larger screen */
 @media screen and (max-width: 1295px) {
     .tile-2 {
         justify-content: center;
