@@ -169,6 +169,7 @@ h5 {
 .tile-1 img,
 .tile-2 img {
     width: 100%;
+    height: 100%;
     filter: grayscale(60%);
     transition: 0.8s;
 }
@@ -202,6 +203,7 @@ h5 {
 }
 
 /* stretch big tile to fit container on big screens */
+
 @media screen and (min-width: 1453px) {
     .tile-1 img {
         /* width: 100%; */
