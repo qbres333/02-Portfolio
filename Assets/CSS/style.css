@@ -28,7 +28,6 @@ body {
 }
 
 
-/* --------------name wraps when window is large------------ */
 .name {
     color: var(--grey);
     background-color: var(--aqua);
