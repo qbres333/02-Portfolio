@@ -135,6 +135,7 @@ body {
 .tile-2 {
     display: flex;
     flex: auto;
+    object-fit: cover;
    
     border: 5px solid var(--aqua);
     position: relative;
@@ -142,7 +143,7 @@ body {
 }
 
 
-/* align text to the bottom right of the big tile */
+/* align text to the bottom left of the tile */
 .tile-text {
     flex-wrap: wrap;
     position: absolute;
