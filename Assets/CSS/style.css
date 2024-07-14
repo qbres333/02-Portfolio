@@ -11,8 +11,8 @@ html {
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    /* stacks elements initially */
+    flex-direction: column; /* stacks elements initially */
+    
 }
 
 .main-header {
@@ -20,9 +20,8 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    /* aligns nav links vertically */
-
+    align-items: center; /* aligns nav links vertically */
+    
     background-color: var(--grey);
     padding: 10px 30px 10px 0px;
 }
@@ -131,17 +130,18 @@ body {
 
 
 /* make the project tiles flex containers */
-.tile-1,
-.tile-2 {
-    display: flex;
+.tile-1, .tile-2 {
+    /* display: flex; */
     flex: auto;
-    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    
+    /* object-fit: fill; */
    
     border: 5px solid var(--aqua);
     position: relative;
     margin: 5px;
 }
-
 
 /* align text to the bottom left of the tile */
 .tile-text {
@@ -170,6 +170,7 @@ viewport width */
 .tile-1 img, .tile-2 img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* added here */
     
     filter: grayscale(60%);
     transition: 0.8s;
